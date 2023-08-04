@@ -1,19 +1,26 @@
-function calculate(
-    a:number ,
-    b: number,
-    type: 'sum' | 'mul' | 'div' | "diff"
- ) : number
-    {
-    if(type === 'sum')
-    return a+b;
-    if(type === 'div')
-    return a/b;
-    if(type === 'mul')
-    return a*b;
-
-    return a-b;
+interface PersonInterface {
+    name:string;
+    age:number
 }
 
-let ans = calculate(3,5,'mul');
-console.log(ans);
+class Person implements PersonInterface{
+    name:string;
+    age:number;
+
+    constructor(name:string,age:number){
+        this.name = name;
+        this.age = age ;
+    }
+
+
+greet():string{
+
+    return "hello "+this.name+".glad you are "+this.age+" years old."
+}
+}
+
+
+
+
+console.log(new Person("mani",22).greet());
 

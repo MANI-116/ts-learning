@@ -1,13 +1,12 @@
 "use strict";
-function calculate(a, b, type) {
-    if (type === 'sum')
-        return a + b;
-    if (type === 'div')
-        return a / b;
-    if (type === 'mul')
-        return a * b;
-    return a - b;
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    greet() {
+        return "hello " + this.name + ".glad you are " + this.age + " years old.";
+    }
 }
-let ans = calculate(3, 5, 'mul');
-console.log(ans);
+console.log(new Person("mani", 22).greet());
 //# sourceMappingURL=index.js.map
